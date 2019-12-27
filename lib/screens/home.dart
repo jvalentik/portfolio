@@ -1,6 +1,3 @@
-import 'dart:html';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
