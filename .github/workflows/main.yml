@@ -27,5 +27,5 @@ jobs:
     - run: flutter build web
     - run: |
         npm install -g firebase-tools
-        firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+        firebase deploy --token "${{secrets.FIREBASE_TOKEN}}"
 
