@@ -18,14 +18,13 @@ jobs:
     - run: flutter config --enable-web
     - run: flutter pub get
     - run: flutter analyze
-    - run: flutter test --coverage
+    - run: flutter test --coverage    
 
     - uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }} #required
-          file: ./coverage/lcov.info #optional
-          flags: unittests #optional
-          name: codecov-umbrella #optional
-          fail_ci_if_error: true #optional (default = false
-    - run: flutter build web
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }} #required
+        file: ./coverage/lcov.info #optional
+        flags: unittests #optional
+        name: codecov-umbrella #optional
+        fail_ci_if_error: true #optional (default = false
 
