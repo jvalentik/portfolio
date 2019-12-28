@@ -13,7 +13,6 @@ const FILES_TO_CACHE = [
     'assets/favicon-32x32.png',
     'assets/favicon-96x96.png',
     'assets/android-icon-144x144.png'
-
 ];
 
 const staticCacheName = `pages-cache-v2`;
