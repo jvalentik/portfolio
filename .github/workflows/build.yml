@@ -10,6 +10,11 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
+    - uses: codecov/codecov-action@v1.0.5
+      with:
+       name: cloudis.dev
+       token: "${{secrets.CODECOV_TOKEN}}"
+       file: coverage/lcov.info
     - uses: subosito/flutter-action@v1.1.1
       with:
         flutter-version: '1.12.13+hotfix.6'
@@ -19,7 +24,6 @@ jobs:
     - run: flutter pub get
     - run: flutter analyze
     - run: flutter test --coverage    
-
     - uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }} #required
@@ -27,4 +31,5 @@ jobs:
         flags: unittests #optional
         name: codecov-umbrella #optional
         fail_ci_if_error: true #optional (default = false
+    - run: flutter build web
 
