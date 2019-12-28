@@ -1,21 +1,18 @@
 const FILES_TO_CACHE = [
     '/',
-    '/index.html',
-    '/main.dart.js',
-    '/manifest.json',
-    '/assets/packages/cupretino_icons/assets/CupertinoIcons.ttf'
-    '/assets/images/logo_square.jpg',
-    '/assets/images/photo.jpg',
-    '/assets/fonts/Roboto-Bold.ttf',
-    '/assets/fonts/Roboto-Italic.ttf',
-    '/assets/fonts/Roboto-Regular.ttf',
-    '/assets/fonts/MaterialIcons-Regular.ttf',
-    '/assets/favicon.ico',
-    '/assets/favicon-16x16.png',
-    '/assets/favicon-32x32.png',
-    '/assets/favicon-96x96.png',
-    '/assets/android-icon-144x144.png'
-
+    'index.html',
+    'main.dart.js',
+    'manifest.json',
+    'assets/images/logo_square.jpg',
+    'assets/images/photo.jpg',
+    'assets/fonts/Roboto-Bold.ttf',
+    'assets/fonts/Roboto-Italic.ttf',
+    'assets/fonts/Roboto-Regular.ttf',
+    'assets/favicon.ico',
+    'assets/favicon-16x16.png',
+    'assets/favicon-32x32.png',
+    'assets/favicon-96x96.png',
+    'assets/android-icon-144x144.png'
 ];
 
 const staticCacheName = `pages-cache-v2`;
