@@ -14,9 +14,18 @@ jobs:
       with:
         flutter-version: '1.12.13+hotfix.6'
         channel: 'beta' # or: 'dev' or 'beta'
+
     - run: flutter config --enable-web
     - run: flutter pub get
     - run: flutter analyze
-    - run: flutter test
+    - run: flutter test --coverage
+
+    - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} #required
+          file: ./coverage/lcov.info #optional
+          flags: unittests #optional
+          name: codecov-umbrella #optional
+          fail_ci_if_error: true #optional (default = false
     - run: flutter build web
 
