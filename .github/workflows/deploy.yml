@@ -21,6 +21,7 @@ jobs:
         flutter-version: '1.12.13+hotfix.6'
         channel: 'beta' # or: 'dev' or 'beta'
     - run: flutter config --enable-web
+    - run: flutter pub get
     - run: |
         sh ./build_web_prod.sh
         npm install -g firebase-tools
